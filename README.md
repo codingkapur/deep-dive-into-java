@@ -72,7 +72,46 @@ class A {
     - Identity -> Objects have unique identities - Not visible to the user but used by the JVM to identify objects.
     (once we declare an int, we don't know where in the memory it is stored as is in C/C++.)
     (identity hash map)
+- Creating an object:
+    a.  Programmer p1; //Initialized an object.
+        p1 = new Programmer();
+
+    b. Programmer p1 = new Programmer();
+
+    new is a keyword which when used, allocated memory to the newly created object p1.
+
+Accessing Class Members:
+Objectname.variableName = value;
+Objectname.methodName(parameterList);
+
+class Programmer
+{
+    String lang;
+    int experience;
+    void createApp() {
+        Code
+    }
+}
+
+Programmer p1 = new Programmer();
+p1.lang = 'Java';
+p1.experience = 5;
+p1.createApp();
+
+The dot operator (.) bridges the object and its methods inherited from the class where it was declared and designed.
 
 ---------------------------------------------------------------------------
-
+## ACCESS MODIFIERS
 ---------------------------------------------------------------------------
+It specifies the accessibility or scope of a field, method, constructor or class. We can change access levels by applying these access modifiers.
+
+There are 4 types of access modifiers in java:
+    - Private - Access only within the class
+    - Default - Access only within the package.
+    - Public  - Access everywhere
+    - Protected - Access only within the clas and outside the class. 
+
+But why?
+    Peformance, code efficiency and encapsulation
+
+Modifiers that are applicable for inner classes but not for outer classes are Private, Protected and Static.
