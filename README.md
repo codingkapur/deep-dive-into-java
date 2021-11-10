@@ -39,7 +39,7 @@ Things to remember:
     - Contructor
     - Blocks
     - Class and Interface
-
+- Creating a class is planning the design of objects. What characteristics, properties and methods can they have, is all defined in the class. 
 SYNTAX:
 
 class <class_name>
@@ -58,3 +58,21 @@ class A {
         return (x + y);
     }
 }
+
+---------------------------------------------------------------------------
+## Objects
+---------------------------------------------------------------------------
+- An object is an instance of a class. An instance of the blueprint. 
+- It has certain properties and specific behavior that has been declared in the class. It can have a specific state. 
+- If int is a class, then int a is an object of the class int. a can only store a value that the class int allows. 
+- Objects in the real world can be tangible or intangible. (House, Burger, Pizza, Speakers vs. Education system)
+- Characterisitcs:
+    - State -> value of the object
+    - Behavior -> the functionality of the object
+    - Identity -> Objects have unique identities - Not visible to the user but used by the JVM to identify objects.
+    (once we declare an int, we don't know where in the memory it is stored as is in C/C++.)
+    (identity hash map)
+
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
