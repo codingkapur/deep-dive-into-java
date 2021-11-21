@@ -46,10 +46,48 @@ Inheritance:
     5. Hierarchial Inheritance
 
 Polymorphism:
-Runtime Polymorphism - Method Overriding
-Compile time Polymorphism - Method overloading
+    - Single Entity Many Forms
+    - Using properties of one class in different classes in different ways
+
+Two types of polymorphism:
+    Runtime Polymorphism - Method Overriding
+    Compile time Polymorphism - Method overloading
+    - Compile time polymorphism:
+        - Achieved by method overloading.
+            - Changing the type of arguments or number of arguments will invoke the appropriate method when the name of the methods is the same. 
+    - Run time polymorphism:
+        - Also known as Dynamic Method Dispatch
+        - This type of polymorphism is achieved using method overriding
+        - A call to the over-ridden method is resolved during run time.
+        - When a method of a sub class or child class is the same as the method in the superclass, with the same name, number of arguments, type and return, the subclass/child class method overrides the superclass method. 
+        - Run time polymorphism upcasting:
+            - Example:
+                class A {}
+                class B extends A{}
+                class C {
+                    public static void main(String a[]){
+                        A obj = new B{}; 
+                        (obj reference is class A, but object is made on class B)
+                    }
+                }
+        IMPORTANT: Method overriding does not apply to data members, but only methods. 
 
 Encapsulation:
+    - Process of hiding the data and code from outside interference
+    - The data and code can be accessed only within the class in which it is defined.
+    - It is achieved by declaring private to variables and public to getter and setter methods.
+    - Getter and setter methods are used to get or modify the code or data.
+    - This appraoch is used for code reusability and testing.
+
+---------------------------------------------------------------------------
+## INTERFACE
+---------------------------------------------------------------------------
+
+Interface allows us to achieve complete abstraction
+Non abstract methods cannot be defined in interface class.
+All the methods in the interface class need to be invoked by child class atleast once.
+We use implements keyword to inherit interface class to non abstract or interfaces classes.
+
 ---------------------------------------------------------------------------
 ## - Advantages of OOP
 ---------------------------------------------------------------------------
@@ -58,6 +96,60 @@ Encapsulation:
 - Code Scalability
 - Splitting of problems into smaller bits for better solvability.
 - Reduced code redundancy becasue of inheritance. 
+---------------------------------------------------------------------------
+## OPERATORS IN JAVA
+---------------------------------------------------------------------------
+Binary operators: 
++
+-
+*
+/
+%
+Unary Operatory
+++
+--
+Pre-Increment
+++a
+change value and then use value
+int a =10;
+int b = 0;
+b = ++a;
+output: b=11, a = 11;
+Post-Increment
+a++
+use value and then change value
+int a =10;
+int b = 0;
+b=a++;
+output: a=11, b= 10;
+
+RELATIONAL OPERATORS:
+==
+!=
+>
+<
+>=
+<=
+LOGICAL OPERATORS:
+&&
+||
+!
+
+BITWISE OPERATORS:
+& binary and
+| binary or
+^ binary XOR
+~ Bianry one's complement
+<< Bianry left shift
+>> Binary right shift
+
+ASSIGNMENT OPERATORS:
+=
++=
+-=
+*=
+/=
+
 ---------------------------------------------------------------------------
 ## Class
 ---------------------------------------------------------------------------
@@ -243,6 +335,11 @@ Also called modifier. It is a non access modifier.
 Static block ->Initialization block in order of appearance in program -> Instance initialization block when class is initialized before constructor is invoked ->
 
 ---------------------------------------------------------------------------
+## DATA STRUCTURES
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
 ## ARRAYS
 ---------------------------------------------------------------------------
 
@@ -302,3 +399,53 @@ public class DynamicArrayDemo {
     int capacity;
 }
 
+---------------------------------------------------------------------------
+## STRINGS
+---------------------------------------------------------------------------
+Strings in java are immutable. Once a string is created in memory, it cannot be modified. 
+Taking input of a string:
+
+    Scanner input = new Scanner(System.in);
+    String name = input.nextline(); //Nextline will take the whole string and store it in the variable name.
+    String name = input.next(); //next will only store the first element in the input string.
+
+Finding the length of a string:
+    name.length();
+Printing the character at a particular postion in the string:
+    name.charAt(i);
+Comparing two strings:
+    name.compareTo(name2); //If the strings are the same, the return value is 0; If strings are not the same, then the return value is a positive or negative number. An if else statement resolves the problem of comparison. 
+Finding a substring in a string:
+    name.substring(starting index, ending index) //If ending index value is not given, the substring will be the remaining. 
+
+Convert a String to an integer:
+    String num = "12345";
+	int toNum = Integer.parseInt(num);
+Get the type of variable:
+	System.out.println(num.getClass().getSimpleName()); //This works only for objects and not for primitive types. 
+	System.out.println(((Object)toNum).getClass().getSimpleName());//So we need to convert primitive data type like integer to an object. 
+To convert an integer to a string:
+    int num = 12345;
+    String str = Integer.toString(num);
+
+---------------------------------------------------------------------------
+## STRING BUILDER
+---------------------------------------------------------------------------
+Doing operations on a string variable can be time consuming, especially as the data set keep getting bigger and bigger. 
+If we want to create a string "hello" and we start off with String name = "h", we will have to do name += 'e' then name+='l' and so one. Everytime a new character is being added, a new memory is allocated and the previous is done away with. This process is redundant.
+This is where string builder comes ones.
+
+StringBuilder sb = new StringBuilder("Hello");
+
+charAt works the same way with stringBuilder.
+
+Switch characters at an index. 
+sb.setCharAt(index, replacing char);
+Insert:
+sb.insert(index, char to add);
+delete:
+sb.delete(start index, end index)
+append:
+sb.append("string to add to the end of the string.")
+length: 
+sb.length();
