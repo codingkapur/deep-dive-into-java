@@ -15,6 +15,5 @@ public class AccessModifiers {
         System.out.println(object.data);
         object.letsPrint();
         System.out.println(object.data);
-
     }
 }

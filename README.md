@@ -140,8 +140,17 @@ BITWISE OPERATORS:
 | binary or
 ^ binary XOR
 ~ Bianry one's complement
-<< Bianry left shift
+<< Binary left shift
 >> Binary right shift
+
+BIT MANIPULATION:
+left shift:     right shift:
+    N<<i            N>>i
+
+getBIt
+setBit
+clearBit
+updateBit
 
 ASSIGNMENT OPERATORS:
 =
@@ -449,3 +458,17 @@ append:
 sb.append("string to add to the end of the string.")
 length: 
 sb.length();
+
+---------------------------------------------------------------------------
+## RECURSION
+---------------------------------------------------------------------------
+Prequisites:
+    - Loops/Iteration
+    - Functions
+Recursion is another way to implement iteration.
+A Recursive function is a function that calls itself.
+
+Note:
+    - Outer functions takes steps
+    - Assumes that the inner function will do the rest of the work.
+Example: Recursion.Java
