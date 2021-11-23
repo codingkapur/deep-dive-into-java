@@ -346,8 +346,6 @@ Static block ->Initialization block in order of appearance in program -> Instanc
 ---------------------------------------------------------------------------
 ## DATA STRUCTURES
 ---------------------------------------------------------------------------
-
-
 ---------------------------------------------------------------------------
 ## ARRAYS
 ---------------------------------------------------------------------------
@@ -407,6 +405,27 @@ public class DynamicArrayDemo {
     int size;
     int capacity;
 }
+
+OPERATIONS IN ARRAY:
+
+    - Traversal
+        - Traversal is a way to display all the elements in an array.
+    - Insertion
+        - Add an element to the array. It can be added anywhere in the array using the Dynamic Array concept.
+    - Deletion
+    - Search
+        - iterate/traverse through the whole array
+    - Sort
+        - Bubble Sort
+        for(int i =0;i<size;i++){
+            for(int j =0;j<size-1-i;j++){
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]= temp;
+                }
+            }
+        }
 
 ---------------------------------------------------------------------------
 ## STRINGS
