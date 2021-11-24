@@ -535,7 +535,7 @@ Features:
     - Uniform APIs
 Collection Frameworks:
     Definition:
-        - group of classes and interfaces which define the different data structures for stroing the collection of elements. 
+        - combination of classes and interfaces which define the different data structures for stroing the collection of elements. 
         - it provides a standardized set of data structures. 
 Interfaces in collections:
     - Iterables
@@ -553,23 +553,46 @@ Methods on Collections:
     - clear
 Interface #1:
     - List Interface
-        - ArrayList
-        - LinkedList
-        - Vector -> Stack
+        An ordered collection
+        Random access possible
+        Index based
+        Allow Duplicates
+            - ArrayList -> Concrete Implementation class
+            - LinkedList
+            - Vector -> Stack
     - Queue Interface (FIFO)
-        - PriorityQueue
-        - LinkedList
-        - Deque -> ArrayDeque
-    - Set Interface
-        - HashSet
-        - LinkedHashSet
-        - SortedSet -> TreeSet
-    - Map (Key-Value)
-        - HashMap
-        - LinkedHashMap
-        - SortedMap -> TreeMap
-        - Hashtable
 
+            - PriorityQueue
+            - LinkedList
+            - Deque -> ArrayDeque
+    - Set Interface
+            - HashSet
+            - LinkedHashSet
+            - SortedSet -> TreeSet
+    - Map (Key-Value)
+            - HashMap
+            - LinkedHashMap
+            - SortedMap -> TreeMap
+            - Hashtable
+COLLECTION FRAMEWORK HEIRARCHY:
+    - Iterable(Top) - Interface
+        - Collection Interface
+            - List Interface                - Queue Interface                       - Set Interface -> hashSet(class)
+                                                - Priority Queue(class)                        -> LinkedHashSet(class)
+                                                                                        - Sorted Set
+            -Implementations
+                - ArrayList(class)                         - Deque Interface                       - Tree Set(class)
+                - LinkedList(class)                            - Array Deque(class)
+                - Vectors(class)
+                    - Stack(class)
+    
+---------------------------------------------------------------------------
+## ITERABLE
+---------------------------------------------------------------------------
+It only has one method
+    - Iterator()
+All classes of collection framework implement iterable
+    - forEach
 ---------------------------------------------------------------------------
 ## LINKED LIST
 ---------------------------------------------------------------------------
