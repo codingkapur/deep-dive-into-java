@@ -491,3 +491,89 @@ Note:
     - Outer functions takes steps
     - Assumes that the inner function will do the rest of the work.
 Example: Recursion.Java
+
+---------------------------------------------------------------------------
+## ARRAYLIST
+---------------------------------------------------------------------------
+Arrays require:
+    - Contiguous space in memory
+    - Fixed Size
+    - Can store primitive types
+ARRAYLIST:
+    - Does not require contiguous memory
+    - Size is variable
+    - Stores only Objects
+OPERATIONS IN ARRAYLIST
+    - Addition
+    - Get
+    - Modify(Add in between or change a value)
+    - Delete/remove
+    - Iterate
+
+---------------------------------------------------------------------------
+## COLLECTIONS
+---------------------------------------------------------------------------
+Interfaces in collections:
+    - Iterables
+        - Collections
+            - List
+            - Queue
+            - Set
+Methods on Collections:
+    - Add
+    - Size
+    - Remove
+    - Iterate
+    - addAll
+    - removeAll
+    - clear
+Interface #1:
+    - List Interface
+        - ArrayList
+        - LinkedList
+        - Vector -> Stack
+    - Queue Interface (FIFO)
+        - PriorityQueue
+        - LinkedList
+        - Deque -> ArrayDeque
+    - Set Interface
+        - HashSet
+        - LinkedHashSet
+        - SortedSet -> TreeSet
+    - Map
+        - HashMap
+        - LinkedHashMap
+        - SortedMap -> TreeMap
+        - Hashtable
+
+---------------------------------------------------------------------------
+## LINKED LIST
+---------------------------------------------------------------------------
+List of elements(nodes) that are linked.
+Properties:
+    - Variable Size
+    - Non Contiguous Memory
+    - Insert BigO is O(1)
+    - Search BigO is O(n)
+
+        ArrayList   vs  LinkedList
+
+Insert      O(n)            O(1)    
+Search      O(1)            O(n)
+
+In cases where manipulation needs to be done, LinkedList is preferred. 
+In cases where search has to be done, ArrayList is preferred.
+
+Structure of a linkedList:
+    - Every element in a linkedList is called a Node. The last element is called the null/empty node.
+    - every node has two sub-elements.
+        - The information/data
+        - next value - The address of the next node in the LinkedList.
+    - The first node is called the Head and we only need the address of this node.
+
+Types of LinkedList:
+    - Singlular (one way traffic)
+    - Double (Two way traffic)
+    - Circular (No null node in the end)
+
+REFER TO LL.java TO SEE HOW A LINKED LIST IS CREATED.
