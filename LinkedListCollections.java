@@ -21,7 +21,7 @@ public class LinkedListCollections {
         list.removeLast();
         System.out.println(list);
 
-        list.remove(1); //Remove a element at a given index;
+        list.remove(1); //Remove a  element at a given index;
         System.out.println(list);
 
     }

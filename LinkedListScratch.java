@@ -1,8 +1,8 @@
 public class LinkedListScratch {
 
-    Node head;
     private int size;
-    LinkedListScratch(){
+
+    LinkedListScratch() {
         this.size = 0;
     }
 
@@ -16,6 +16,8 @@ public class LinkedListScratch {
             size++;
         }
     }
+
+    Node head;
 
     // OPERATIONS
     // ---ADD--- FIRST
@@ -46,7 +48,7 @@ public class LinkedListScratch {
     // ---DELETE--- FIRST
 
     public void deleteFirst() {
-        if(head == null){
+        if (head == null) {
             System.out.println("The list is empty!");
             return;
         }
@@ -56,25 +58,26 @@ public class LinkedListScratch {
 
     // ---DELETE--- LAST
     public void deleteLast() {
-        if(head == null){
+        if (head == null) {
             System.out.println("The list is empty!");
             return;
         }
         size--;
 
-        if(head.next == null){
-            head=null;
+        if (head.next == null) {
+            head = null;
             return;
         }
         Node secondLast = head;
         Node lastNode = head.next;
-        while(lastNode.next != null){
+        while (lastNode.next != null) {
             lastNode = lastNode.next;
             secondLast = secondLast.next;
         }
         secondLast.next = null;
     }
-    public int getSize(){
+
+    public int getSize() {
         return size;
     }
 
@@ -106,7 +109,6 @@ public class LinkedListScratch {
         System.out.println(list.getSize());
         list.addFirst("this");
         System.out.println(list.getSize());
-
 
     }
 }

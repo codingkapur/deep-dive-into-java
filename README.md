@@ -513,6 +513,30 @@ OPERATIONS IN ARRAYLIST
 ---------------------------------------------------------------------------
 ## COLLECTIONS
 ---------------------------------------------------------------------------
+When creating an application dealing with data, we need to have the following features:
+    - Better Storage
+    - Optimized search
+    - Perform CRUD operations
+Why do we need Collections:
+    - Optimized Storage
+    - Lower time complexity in calculations
+To achieve these effects, we would need the correct data storage for the right situation. For eg.:
+    - Index based access/ Maintain order of insertion : Arrays or linked List
+    - First in First Out (FIFO) : Queues
+    - Last In First Out (LIFO) : Stack
+    - Key Value pair : Map
+    - Heirarchical: Tree
+Collection Framework has pre implemented data structures. They do not need to be created from scratch.
+Features:
+    - Reduced Programming effort
+    - Increased Performance.
+    - Interoperbility
+    - Promotes Reuse
+    - Uniform APIs
+Collection Frameworks:
+    Definition:
+        - group of classes and interfaces which define the different data structures for stroing the collection of elements. 
+        - it provides a standardized set of data structures. 
 Interfaces in collections:
     - Iterables
         - Collections
@@ -540,7 +564,7 @@ Interface #1:
         - HashSet
         - LinkedHashSet
         - SortedSet -> TreeSet
-    - Map
+    - Map (Key-Value)
         - HashMap
         - LinkedHashMap
         - SortedMap -> TreeMap
